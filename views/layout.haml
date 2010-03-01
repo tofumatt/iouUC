@@ -1,0 +1,17 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
+    %title iouUC - #{@title}
+    
+    %link{:href => "/styles/reset.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/styles/iou.css", :rel => "stylesheet", :type => "text/css"}
+    
+    %link{:href => "/favicon.png", :rel => "icon", :type => "image/png"}
+    /[if IE]
+      %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+  %body
+    %h1 #{@title}
+    
+    %div{:id => "footer"}
+      

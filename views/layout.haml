@@ -4,17 +4,17 @@
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
     %title iouUC - #{@title}
     
-    %link{:href => "/stylesheets/reset.css", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "/stylesheets/iou.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/reset.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/iou.css", :rel => "stylesheet", :type => "text/css"}/
     
-    %link{:href => "/favicon.png", :rel => "icon", :type => "image/png"}
+    %link{:href => "/favicon.png", :rel => "icon", :type => "image/png"}/
     /[if IE]
-      %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+      %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
   %body
     %h1 #{@title}
     
-    %div{:id => "content"}
+    #content
       = yield
     
-    %div{:id => "footer"}
+    #footer
       

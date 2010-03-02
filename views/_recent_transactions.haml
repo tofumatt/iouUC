@@ -1,0 +1,16 @@
+%h2 Recent transactions
+
+%table
+  %thead
+    %tr
+      %th.for For
+      %th.by By
+      %th.amount Amount
+      %th.date Date
+  %tbody
+    - @transactions.each do |t|
+      %tr
+        %td.for= DB[:people].first(:id => t[:person_for])[:name]
+        %td.by= DB[:people].first(:id => t[:person_owed])[:name]
+        %td.amount= money_format t[:amount]
+        %td.date= date_format t[:date_created]

@@ -1,0 +1,7 @@
+%form{:method => "post", :action => "/people"}
+  - unless @person.nil?
+    %input{:type => "hidden", :id => "id", :class => "hide", :name => "person[id]", :value => @person[:id]}
+  %label{:id => "name-label", :for => "name"} Name
+  %input{:type => "text", :id => "name", :name => "person[name]", :value => (@person[:name] unless @person.nil?)}
+  %label{:id => "person-submit-label", :class => "hide", :for => "person-submit"} Submit
+  %input{:type => "submit", :id => "person-submit", :value => "Submit"}

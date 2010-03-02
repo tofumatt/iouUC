@@ -1,0 +1,15 @@
+%form{:method => "post", :action => "/transactions"}
+  %label{:id => "person_for-label", :for => "person_for"} Bought For
+  %select{:id => "person_for-label", :name => "transaction[person_for]"}
+    - @people.each do |p|
+      %option{:value => p[:id]}= p[:name]
+  
+  %label{:id => "person_by-label", :for => "person_by"} Bought By
+  %select{:id => "person_by-label", :name => "transaction[person_owed]"}
+    - @people.each do |p|
+      %option{:value => p[:id]}= p[:name]
+  
+  %label{:id => "amount-label", :for => "amount"} Amount
+  %input{:type => "text", :id => "amount", :name => "transaction[amount]"}
+  %label{:id => "person-submit-label", :class => "hide", :for => "person-submit"} Submit
+  %input{:type => "submit", :id => "person-submit", :value => "Submit"}

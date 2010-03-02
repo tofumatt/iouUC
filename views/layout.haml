@@ -11,10 +11,11 @@
     /[if IE]
       %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
   %body
-    %h1 #{@title}
+    #page
+      %h1= @title
     
-    #content
-      = yield
+      #content
+        = yield
     
-    #footer
-      
+      #footer
+        

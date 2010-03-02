@@ -1,0 +1,14 @@
+- @people.each do |person|
+  %h3= person[:name]
+  
+  %table
+    %thead
+      %tr
+        %th.owes Owes
+        %th.amount Amount
+    %tbody
+      - @people.each do |p|
+        - unless person[:id] == p[:id]
+          %tr
+            %td.owes= p[:name]
+            %td.amount= money_format( debt(person, p) )

@@ -1,2 +1,40 @@
+!border = "1px solid #ccc"
+
 body
-  background: #ccc
+  background: white
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif
+  font-size: 1.2em
+  line-height: 1.6em
+
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+
+h1
+  font-family: Times, "Times New Roman", serif
+  font-size: 3em
+  margin: 24px 0
+  text-align: center
+
+h2
+  font-size: 2em
+  margin: 16px 0
+
+th, td
+  border = !border
+  min-width: 100px
+  padding: .25em
+  
+  &.cost
+    min-width: 75px
+  
+  &.for
+    min-width: 150px
+
+#page
+  margin: 0 auto
+  width: 700px
+
+#content
+  border = !border
+  padding: 5px
+

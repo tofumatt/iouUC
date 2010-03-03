@@ -12,9 +12,15 @@
       %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
   %body
     #page
-      %h1= @title
+      %h1
+        %a{:href => '/'}= @title
     
       #content
+        - unless @errors.nil? or @errors.empty?
+          #errors.notice
+            %ul
+            - @errors.each do |e|
+              %li= e
         = yield
     
       #footer

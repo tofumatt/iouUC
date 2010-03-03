@@ -1,5 +1,9 @@
 !border = "1px solid #ccc"
 
+!error_colour = #f2a2a2
+!alert_colour = #f2d7a2
+!notice_colour = #a8f2a2
+
 body
   background: white
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif
@@ -14,10 +18,17 @@ h1
   font-size: 3em
   margin: 24px 0
   text-align: center
+  
+  a
+    color: black
+    display: block
 
 h2
+  border-bottom: 5px #777 solid
+  color: #222
   font-size: 2em
   margin: 16px 0
+  padding: 0 0 .25em
 
 h3
   border-bottom: 4px #aaa solid
@@ -27,6 +38,9 @@ h3
 
 select
   font-size: 1.1em
+
+table.debt
+  margin: 0 0 0 12px
 
 th
   font-weight: bold
@@ -50,3 +64,37 @@ th, td
   border = !border
   padding: 5px
 
+.notice
+  border: 2px solid
+  font-weight: bold
+  margin: 0 auto
+  padding: 5px
+  text-align: center
+  text-shadow: none
+  width: 90%
+  
+  & p, & ul
+    margin: 0 auto
+    padding: 0 12px
+  
+  & a
+    color: black !important
+    text-shadow: none !important
+  
+    &:hover, &:focus
+      background: white
+
+#errors
+  background = !error_colour + #111111
+  border-color = !error_colour - #666666
+  color = !error_colour - #666666
+
+#alerts
+  background = !alert_colour + #111111
+  border-color = !alert_colour - #666666
+  color = !alert_colour - #999999
+
+#notices
+  background = !notice_colour + #111111
+  border-color = !notice_colour - #666666
+  color = !notice_colour - #666666

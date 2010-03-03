@@ -1,3 +1,5 @@
+%h2 Add a person
+
 %form{:method => "post", :action => "/people"}
   - unless @person.nil?
     %input{:type => "hidden", :id => "id", :class => "hide", :name => "person[id]", :value => @person[:id]}

@@ -1,16 +1,21 @@
-%form{:method => "post", :action => "/transactions"}
-  %select{:id => "person_for", :name => "transaction[person_for]"}
-    - @people.each do |p|
-      %option{:value => p[:id]}= p[:name]
-  %label{:id => "person_for-label", :for => "person_for"} owes
+- if @people.count > 1
+  %form{:method => "post", :action => "/transactions"}
+    %select{:id => "person_for", :name => "transaction[person_for]"}
+      - @people.each do |p|
+        %option{:value => p[:id]}= p[:name]
+    /%label{:id => "person_for-label", :for => "person_for"} owes
+    %select{:id => "operator", :name => "operator"}
+      %option{:value => "+"} owes
+      %option{:value => "-"} paid
   
-  %select{:id => "person_by", :name => "transaction[person_owed]"}
-    - @people.each do |p|
-      %option{:value => p[:id]}= p[:name]
-  %label{:id => "person_by-label", :for => "person_by"} for
+    %select{:id => "person_by", :name => "transaction[person_owed]"}
+      - @people.each do |p|
+        %option{:value => p[:id]}= p[:name]
+    %label{:id => "person_by-label", :for => "person_by"} for
   
-  %input{:type => "text", :id => "amount", :name => "transaction[amount]"}
-  %label{:id => "amount-label", :for => "amount"} worth of stuff
+    $
+    %input{:type => "text", :id => "amount", :name => "transaction[amount]"}
+    %label{:id => "amount-label", :for => "amount"} worth of stuff
   
-  %label{:id => "person-submit-label", :class => "hide", :for => "person-submit"} Submit
-  %input{:type => "submit", :id => "person-submit", :value => "Submit"}
+    %label{:id => "person-submit-label", :class => "hide", :for => "person-submit"} Submit
+    %input{:type => "submit", :id => "person-submit", :value => "Submit"}

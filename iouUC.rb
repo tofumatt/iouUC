@@ -1,6 +1,8 @@
 # iouUC
 # A simple Sinatra app for keeping track of office coffee
 # 
+# MIT-licensed, 2010
+# 
 # by: Matthew Riley MacPherson (lonelyvegan.com)
 
 require "rubygems"
